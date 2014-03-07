@@ -1,3 +1,3 @@
 cd /app
-git pull origin master
+git pull origin $1
 python -m SimpleHTTPServer
