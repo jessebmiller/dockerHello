@@ -1,4 +1,6 @@
-export DOCKER_HOST=tcp://localhost:4243
-export DOCKER_HOST=tcp://localhost:4243 && docker -d &
-sleep 3
-export DOCKER_HOST=tcp://localhost:4243 && docker build -t dockerHello /home/travis/build/jessebmiller/dockerHello
+sudo apt-get update
+sudo apt-get install -y linux-lts-raring
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+sudo sh -c "echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
+sudo apt-get install lxc-docker
+docker build .
