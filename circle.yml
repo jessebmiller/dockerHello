@@ -4,7 +4,7 @@ machine:
 
 checkout:
   post:
-    export HERD_COMMIT = git revparse --short HEAD
+    - export HERD_COMMIT = git revparse --short HEAD
 
 dependencies:
   override:
