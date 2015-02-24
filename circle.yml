@@ -13,7 +13,7 @@ dependencies:
 
 test:
   override:
-    - docker run jesse/dockerhello$HERD_COMMIT true
+    - docker run jesse/dockerhello:$HERD_COMMIT true
 
 deployment:
   hub:
