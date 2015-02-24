@@ -9,5 +9,5 @@ dependencies:
 
 test:
   override:
-    - docker run dockerHello ls
+    - docker run dockerhello ls
 
