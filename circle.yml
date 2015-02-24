@@ -2,14 +2,18 @@ machine:
   services:
     - docker
 
+checkout:
+  post:
+    export HERD_COMMIT = git revparse --short HEAD
+
 dependencies:
   override:
     - docker info
-    - docker build -t jesse/dockerhello .
+    - docker build -t jesse/dockerhello:$HERD_COMMIT .
 
 test:
   override:
-    - docker run jesse/dockerhello true
+    - docker run jesse/dockerhello$HERD_COMMIT true
 
 deployment:
   hub:
