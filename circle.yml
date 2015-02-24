@@ -5,14 +5,14 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build -t r.iadops.com/dockerhello .
+    - docker build -t jesse/dockerhello .
 
 test:
   override:
-    - docker run r.iadops.com/dockerhello true
+    - docker run jesse/dockerhello true
 
 deployment:
   hub:
     branch: master
     commands:
-      - docker push r.iadops.com/dockerhello
+      - docker push jesse/dockerhello
