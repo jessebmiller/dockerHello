@@ -5,7 +5,7 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build -t dockerHello .
+    - docker build -t dockerhello .
 
 test:
   override:
